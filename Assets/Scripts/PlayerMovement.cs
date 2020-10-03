@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int MaxMovement = 2;
+ 
     public float Speed = 10F;
-    
+    public float MinOffset = -3F;
+    public float MaxOffset = 3F;
     
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,12 @@ public class PlayerMovement : MonoBehaviour
     {
         var hAxis = Input.GetAxis("Horizontal");
 
-      
-        transform.Translate(Vector3.right * (hAxis * Speed * Time.deltaTime));
+        var translateVector = Vector3.right * (hAxis * Speed * Time.deltaTime);
+        var newPosition = transform.position + translateVector;
+     
+        if(newPosition.x >= MinOffset && newPosition.x <= MaxOffset)
+        {
+            transform.Translate(translateVector);
+        }
     }
 }

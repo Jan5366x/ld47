@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour, IHit
 
     public void Hit()
     {
-        // TODO Game Over
+        GlobalLogic.IsAlive = false;
         Destroy(gameObject);
     }
 

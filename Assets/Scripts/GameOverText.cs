@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreText : MonoBehaviour
+public class GameOverText : MonoBehaviour
 {
     private Text textObj;
     // Start is called before the first frame update
@@ -15,6 +15,6 @@ public class ScoreText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textObj.text = GlobalLogic.Score.ToString();
+        textObj.enabled = !GlobalLogic.IsAlive;
     }
 }

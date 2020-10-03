@@ -20,6 +20,9 @@ public class TargetHealth : MonoBehaviour, IHit
 
     public void Hit()
     {
+        if (GlobalLogic.IsAlive)
+            GlobalLogic.Score += 5;
+        
         Instantiate(exploEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }

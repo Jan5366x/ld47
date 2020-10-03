@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\IHit.cs" />
      <Compile Include="Assets\Scripts\GlobalLogic.cs" />
      <Compile Include="Assets\Scripts\ScoreText.cs" />
+     <Compile Include="Assets\Scripts\GameOverText.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Jan/ld47/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
