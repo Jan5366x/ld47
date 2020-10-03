@@ -51,6 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\AutoRotate.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Jan/ld47/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
