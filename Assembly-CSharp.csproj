@@ -59,6 +59,10 @@
      <Compile Include="Assets\Scripts\PlayerShotLogic.cs" />
      <Compile Include="Assets\Scripts\Lifetime.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\TargetHealth.cs" />
+     <Compile Include="Assets\Scripts\IHit.cs" />
+     <Compile Include="Assets\Scripts\GlobalLogic.cs" />
+     <Compile Include="Assets\Scripts\ScoreText.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Jan/ld47/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

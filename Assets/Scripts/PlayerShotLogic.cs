@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class PlayerShotLogic : MonoBehaviour
@@ -15,5 +17,16 @@ public class PlayerShotLogic : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * (Speed * Time.deltaTime));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var hitLogic = other.gameObject.GetComponent<TargetHealth>();
+
+        if (hitLogic != null)
+        {
+            hitLogic.Hit();
+            Destroy(gameObject);
+        }
     }
 }
