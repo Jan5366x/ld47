@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoRotate : MonoBehaviour
+public class Lifetime : MonoBehaviour
 {
-    public float SpeedA = 2f;
-    public float SpeedB = 1.5f;
+    public float Time = 10F;
+    private float timer = 0F;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,11 @@ public class AutoRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up, SpeedA * Time.deltaTime);
-        transform.Rotate(Vector3.right, SpeedB * Time.deltaTime);
+        if (timer >= Time)
+        {
+            Destroy(gameObject);
+        }
+
+        timer += UnityEngine.Time.deltaTime;
     }
 }

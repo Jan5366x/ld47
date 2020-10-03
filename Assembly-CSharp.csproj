@@ -52,6 +52,13 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\AutoRotate.cs" />
+     <Compile Include="Assets\Scripts\SpreadSpawner.cs" />
+     <Compile Include="Assets\Scripts\AutoMovement.cs" />
+     <Compile Include="Assets\Scripts\DestoryOutOfView.cs" />
+     <Compile Include="Assets\Scripts\PlayerWeaponScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerShotLogic.cs" />
+     <Compile Include="Assets\Scripts\Lifetime.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Jan/ld47/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

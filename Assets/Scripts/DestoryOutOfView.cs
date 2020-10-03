@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoRotate : MonoBehaviour
+public class DestoryOutOfView : MonoBehaviour
 {
-    public float SpeedA = 2f;
-    public float SpeedB = 1.5f;
+    public float Deep = -20F;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +14,7 @@ public class AutoRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up, SpeedA * Time.deltaTime);
-        transform.Rotate(Vector3.right, SpeedB * Time.deltaTime);
+        if (transform.position.z < Deep)
+            Destroy(gameObject);
     }
 }

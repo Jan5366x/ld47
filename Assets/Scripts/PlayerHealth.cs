@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoRotate : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    public float SpeedA = 2f;
-    public float SpeedB = 1.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +13,12 @@ public class AutoRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up, SpeedA * Time.deltaTime);
-        transform.Rotate(Vector3.right, SpeedB * Time.deltaTime);
+        
+    }
+
+    public void Hit()
+    {
+        // TODO Game Over
+        Destroy(gameObject);
     }
 }
