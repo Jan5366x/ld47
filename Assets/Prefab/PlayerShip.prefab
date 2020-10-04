@@ -300,9 +300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a6d8de8ceb1f2459530af3a0f617f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  MaxSpeed: 100
+  Acceleration: 100
+  Deceleration: 10
   MinOffset: -14
   MaxOffset: 14
+  MaxLean: 25
+  CurrentSpeed: 0
 --- !u!114 &4379357580559273957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0417e7e830402ca4da4c21fa5b64f441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploEffect: {fileID: 2775266214025955133, guid: 680aacb3b592d6b47af24a8b9df2d6c5, type: 3}
 --- !u!65 &5135015319447249960
 BoxCollider:
   m_ObjectHideFlags: 0

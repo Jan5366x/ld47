@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IHit
 {
+    public GameObject exploEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class PlayerHealth : MonoBehaviour, IHit
     public void Hit()
     {
         GlobalLogic.IsAlive = false;
+        Instantiate(exploEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

@@ -6,8 +6,10 @@ using UnityEngine.SocialPlatforms;
 public class SpreadSpawner : MonoBehaviour
 {
     public float Range = 2F;
-    public float SpawnSpeed = 2F;
+    public float SpawnSpeed = 10F;
+    public float SpawnSpeedReduction = 0.0001F;
     public GameObject SpawnObject;
+    public float MinSpawnSpeed = 0.1F;
 
     private float timer = 0F;
     
@@ -22,6 +24,10 @@ public class SpreadSpawner : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        
+        if (SpawnSpeed > MinSpawnSpeed)
+            SpawnSpeed -= SpawnSpeedReduction * Time.deltaTime;
+        
         if (timer >= SpawnSpeed)
         {
             var oldPos = transform.position;
